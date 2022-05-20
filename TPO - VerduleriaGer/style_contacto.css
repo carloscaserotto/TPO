@@ -1,0 +1,202 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: white;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+}
+
+#mensaje{
+  border: 2px solid black;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: (4, 1fr);
+    grid-gap: 20px;
+  }
+.container header{
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    align-items: center;
+    border-bottom: 0.5px solid grey;
+}
+
+header .header1 {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+  }
+  
+header .header2 {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+}
+header .header2 img {
+  width: 25%;
+  height: 25%;
+}
+  
+header .header3 {
+    grid-column: 3;
+    grid-row: 1;
+    text-align: center;
+}
+
+.container .article1{
+    display: grid;
+    grid-template-columns: (4, 1fr);
+}
+
+.container .article1 >a {
+  padding-top: 5px;
+  text-align: center;
+}
+
+.article1 .inicio {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+.article1 .micarrito {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+.article1 .recetas {
+    grid-column: 3;
+    grid-row: 1;
+}
+.article1 .contacto {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.container .article3{
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: (3, 1fr);
+}
+
+.article3 .header1 {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    background-color: red;
+    border: 2px solid red;
+    height: auto;
+    color: white;
+  }
+  
+.article3 .header2 {
+    grid-column: 2;
+    grid-row: 1;
+    background-color:green;
+    border: 2px solid green;
+    height: auto;
+    text-align: center;
+    color: white;
+  }
+.article3 .header2 a{
+    color: white;
+    text-decoration: none;
+}
+  
+.article3 .header3 {
+    grid-column: 3;
+    grid-row: 1;
+    background-color:rgb(126, 0, 128);
+    border: 2px solid rgb(126, 0, 128);
+    height: auto;
+    text-align: center;
+    color: white;
+}
+
+.article3 .header3 a{
+  color: white;
+  text-decoration: none;
+}
+
+.container .article4{
+  display: grid;
+  grid-template-columns: (2, 1fr);
+  grid-template-rows: (2, 1fr);
+}
+.article4 .header4 {
+    grid-column: 1;
+    grid-row: 1;
+}
+.article4 .header5 {
+    grid-column: 1;
+    grid-row: 2;
+}
+.article4 .header6 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.article4 .header5 {
+  display: grid;
+  grid-template-columns: (2, 1fr);
+  text-align: center;
+}
+.article4 .header5 .subheader5{
+  grid-column: 1/2;
+}
+.article4 .header5 .subheader6{
+  grid-column: 2;
+}
+
+#footer{
+  border: 2px solid black;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media only screen and (width:500px) {
+	body {
+		background: orange;
+	}
+}
+
+@media screen and (max-width: 650px){
+	header .header1 {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+      }
+      
+    header .header2 {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: center;
+    }
+    header .header2 img {
+      width: 25%;
+      height: 25%;
+    }
+      
+    header .header3 {
+        grid-column: 3;
+        grid-row: 1;
+        text-align: center;
+    }
+    
+}
+
+@media only screen and (width:800px) {
+	body {
+		background: blue;
+	}
+}

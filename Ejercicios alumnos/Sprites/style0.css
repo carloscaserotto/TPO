@@ -1,0 +1,16 @@
+#ordenador {
+  background-image: url(sprites.png);
+  border: 1px solid red;
+  width: 960px;
+  height: 715px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+#movil {
+  background-image: url(sprites.png);
+  border: 1px solid red;
+  width: 960px;
+  height: 715px;
+  background-position: 0 0;
+  display: inline-block;
+}

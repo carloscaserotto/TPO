@@ -1,0 +1,16 @@
+footer{
+    color: white; 
+    background-color: black;
+}
+
+#tel{
+    color: white; 
+    background-color: black;
+}
+
+.tarjeta{
+    border: 1px solid black;
+    width: 300px;
+    border-radius: 10px;
+
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+-->
+</head>
+
+<body>
+    <h1>Rick and Morty:</h1>
+    <div id="app">
+        <button @click="anterior1()">Anterior</button>
+        <!--   <button @click=" fetchData({{anterior}} .....)">Anterior</button>-->
+        <button @click="siguiente1()">Siguiente</button><br>
+        <div style="display: flex; flex-direction:row; flex-wrap:wrap; justify-content:center; " >
+            <div v-for="personaje in personajes" style=" border-radius: 13;border:1px solid rgb(235, 232, 232); display:block; width:200px; padding: 5px ;margin: 10px;">
+                <img :src="personaje.image"  alt="Card image" style="width:100%">
+                <div >
+                    <h3> {{personaje.name}} </h3>
+                    <p>ID: {{personaje.id}}</p>
+                    <p>Estado: {{personaje.status}}</p>
+                    <p>Género:{{personaje.gender}} </p>
+                    <p>Creado: {{personaje.created.substr(0,10)}}</p>
+                    <p>Especie: {{personaje.species}} </p>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

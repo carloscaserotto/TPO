@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer proyecto con Vue 3!</title>
+    <!-- CDN vue 3 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ejemplo">
+    <contador></contador>
+    <h1> {{ titulo }}</h1>
+    
+    <ul>
+      <li v-for="fruta in frutas"> 
+        {{ fruta.nombre }} - {{ fruta.cantidad }} 
+        <span v-if="fruta.cantidad===0"> - Sin Stock</span>
+        <span v-else-if="fruta.cantidad<stock"> - Stock Bajo</span>
+        <span v-else="fruta.cantidad>=stock"> - Stock Alto</span>
+    </li>
+    </ul>
+    <input type="text" v-model="nuevaFruta" @keyup.enter="agregarFruta">
+    <button v-on:click=agregarFruta()>Clic para agregar fruta</button>
+    <button v-on:click=quitarFruta()>Clic para quitar fruta</button>
+    <br>
+    <button @click="conuntUp">Add 1</button>
+    <button @click="countDown">Rest 1</button>
+    <p>Count is: {{ count }}</p>
+    <input type="text" v-model="name">
+    <button @click="greet">Greet</button> 
+    <br>
+    <h4>Total: {{sumarFrutas}}</h4>
+    
+    <ul>
+      <li v-for="fruta in frutas">
+          {{ fruta.nombre }} - <input type="number" v-model.number="fruta.cantidad">
+          <button @click=fruta.cantidad++>+</button>
+          <button @click=fruta.cantidad-->-</button>
+      </li>
+    </ul>
+  <h4>Total: {{sumarFrutas}}</h4>
+  </div>
+
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
+  <script src="main.js"></script>
+</body>
+</html>

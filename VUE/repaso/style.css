@@ -1,0 +1,8 @@
+#marvel img{
+    width: 100%;
+    
+}
+#marvel>div {
+    width: 200px;
+    border: 1px solid red;
+}

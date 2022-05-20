@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Grid 2</title>
+    <style>
+        .box {
+            background: slateblue;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .contenedor {
+            display: grid;
+            height: 500px;
+            background: cornflowerblue;
+            
+            gap: 10px;
+            grid-template-columns: 100px 100px;
+
+/*            grid-template-columns: 1fr 1fr;*/
+            grid-template-rows: 100px 100px;
+            /*grid-template-rows: 2fr 1fr; */
+            /* https://www.w3schools.com/css/css_grid_container.asp */
+            justify-content  : flex-start;
+            /*justify-content  : flex-end;*/
+            /*justify-content  : center;*/
+            /*align-items: center;  /* no funciona*/
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">+</div>
+        <div class="box">+</div>
+    </div>
+</body>
+</html>

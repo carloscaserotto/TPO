@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer proyecto con Vue 3!</title>
+    <!-- CDN vue 3 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="marvel">
+    <div v-for="objeto in datos">
+        <h2>Name: {{objeto.name}}</h2>
+        <p>Quote: {{objeto.quote}}</p>
+        <img :src="objeto.poster" :alt="objeto.name" width=25%>
+    </div>
+  </div>
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
+  <script src="main.js"></script>
+</body>
+</html>

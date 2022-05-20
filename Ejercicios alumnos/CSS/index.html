@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+  span > a{
+    color: red;
+  }
+
+  div + p{
+    color: red;
+  }
+  div ~ p {
+    color: yellow;
+  }
+
+  p:first-child{
+    color: red;
+  }
+  p:nth-child(2){
+    color: lightblue;
+  }
+  a:hover{
+    font-size: 15px;
+  }
+  a:active{
+    background-color: green;
+    color: white;
+  }
+  p::first-letter{
+    color:blue;
+  }
+  div p::after {
+    content: " - Remember this";
+  }
+
+  div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 4s;
+  }
+
+  div:hover {
+    width: 300px;
+  }
+
+  </style>
+  <body>
+    <span>
+      <a href="#">Selector de hijos directos</a>
+      <a href="#">Selector de hijos directos2</a>
+    </span>
+      <a href="#">Selector de hijos directos2</a>
+    <h1>MORE THAN WORDS</h1>
+    <h2>ACA VAN PALABRAS</h2>
+    <div>
+      <p>Selector hermano adyacente</p>
+      <p>Selector hermano adyacente</p>
+      <p>Selector hermano adyacente</p>
+    </div>
+      <p>Selector hermano adyacente</p>
+      <p>Selector hermano adyacente</p>
+      <p>Selector hermano adyacente</p>
+
+    <div>
+      Demo of the ::after selector
+      <p>My name is Donald</p>
+      <p>I live in Ducksburg</p>
+    </div>
+
+    <h1>The transition Property</h1>
+    <p>Hover over the div element below, to see the transition effect:</p>
+    <div></div>
+
+
+
+  </body>
+</html>

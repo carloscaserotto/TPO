@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/44f9537c4a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style_main.css">
+    <title>Trabajo Practico Nro 1</title>
+</head>
+
+<body>
+    <h5 id="mensaje"> <i class="fa-solid fa-truck"></i> ENVÍO SIN CARGO SI TU COMPRA SUPERA LOS $ 1050. EMPEZÁ A COMPRAR AHORA MISMO!</h5>
+    <div class="container">
+        <header>
+            <div class="header1">
+                <ul>
+                    <p>Bienvenidos <i class="fa-solid fa-basket-shopping"></i></p>
+                    <a href="pedidos.html"><p>armá tu pedido</p></a>
+                    <p>Y RECIBILO EN TU DOMICILIO</p>
+                </ul>
+            </div>
+            <div class="header2">
+                <h5> Bienvenidos a la verduleria de Ger</h5>
+                <img src="imagenes/carrot.jpg" alt="carrot">
+            </div>
+            <div class="header3">
+                <form action="#" method="post" target="_blank">
+                    <p>              
+                      <input type="search" name="buscarproducto" style="font-family: FontAwesome;" placeholder="&#xF002; Buscar producto">
+                      <input type="submit" value="Buscar">
+                    </p>
+                  </form>
+            </div>
+
+        </header>
+        <article class="article1">
+            <a href="inicio" class="inicio">Inicio</a>
+            <a href="micarrito"class="micarrito">Mi carrito</a>
+            <a href="recetas"class="recetas">Recetas</a>
+            <a href="contacto"class="contacto">Contacto</a>
+        </article>
+        <article class="article2">
+            <div id="imagen">
+            </div>
+            <a href="pedidos.html">
+                <button>Arma tu pedido</button>
+            </a>
+            
+        </article>
+        <article class="article3">
+            <div class="header1">
+                <p>ENVÍO SIN CARGO</p>
+                <p>a partir de $1050</p>
+            </div>
+            <div class="header2">
+               <p> PRODUCTOS FRESCOS</p>
+               <a href="">Empezá a comprar ></a>
+            </div>
+            <div class="header3">
+                <p>VENTA MAYORISTA</p>
+                <a href="">Consultar ahora ></a>
+            </div>
+            
+        </article>
+        <article class="article4">
+            <h1 class="header4">ZONAS Y HORARIOS DE REPARTO</h1>
+            <div class="header5">
+               <div class="subheader5">
+                <p>Entregamos en C.A.B.A. y Zona norte</p>
+                <p>Zonas de reparto:</p>
+                <p>CABA</p>
+               </div>
+               <div class="subheader6">
+                <p>Dia (Hora) de reparto:</p>
+                <p>De lunes a sábados de 9 a 15hs.</p>
+               </div>
+            </div>
+            <div class="header6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9559.670577762006!2d-58.47543846398977!3d-34.613364363135005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1652980916393!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </article>
+        
+        <footer id="footer">
+            <h3>www.verdurasger.com.ar © Copyright © 2022 - Todos los derechos reservados<a href="https://www.buenosaires.gob.ar/educacion/codo-codo" >LINK</a>”
+            <p id="date"></p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("date").innerHTML = "Date : " + Date();
+        
+        document.getElementById("widget-2").addEventListener("click",myFunction );
+  
+        function myFunction() {
+          var txt;
+          if (confirm("Presione un boton!")) {
+            txt = "You pressed OK!";
+          } else {
+            txt = "You pressed Cancel!";
+          }
+          alert(txt);
+        }
+      </script>
+</body>
+
+
+
+</html>

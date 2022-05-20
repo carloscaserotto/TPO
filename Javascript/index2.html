@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Ejercicios</title>
+
+    <style>
+
+    </style>
+  </head>
+
+  <body>
+    <form name="myForm" action="foo.com" onsubmit="return validateForm()" method="post">
+      Name: <input type="text" name="fname"></br>
+      Last Name: <input type="text" name="lname"></br>
+      Email Name: <input type="email" name="email"></br>
+      <input type="submit" value="Submit">
+    </form>
+
+
+    <script>
+    function validateForm() {
+      let fname = document.forms["myForm"]["fname"].value;
+      let lname = document.forms["myForm"]["lname"].value;
+      let email = document.forms["myForm"]["email"].value;
+      if (fname == "" || lname == "" || email == "" ) {
+        alert("Pls filled out all the fils from the form");
+        return false;
+      }
+    }
+
+
+    </script>
+  </body>
+</html>

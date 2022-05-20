@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM Tutorial</title>
+
+  </head>
+  <body>
+    <div id="apellido"></div>
+    <div id="nombre"></div>
+
+
+
+  <script>
+  let nombre = prompt("Ingrese su nombre: ")
+
+  if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("apellido", "Perez"); // No existe, lo agrega.
+    localStorage.setItem("apellido", "Pérez"); // Existe, lo reemplaza
+    localStorage.setItem("nombre", nombre);
+    localStorage.setItem("edad", "25");
+    // Retrieve
+    document.getElementById("apellido").innerHTML = localStorage.getItem("apellido");
+    document.getElementById("nombre").innerHTML = localStorage.getItem("nombre");
+  } else {
+    document.getElementById("resultado").innerHTML = "Su navegador no soporta Web Storage.";
+  }
+
+
+
+
+  </script>
+  </body>
+</html>

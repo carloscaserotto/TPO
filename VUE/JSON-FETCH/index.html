@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer proyecto con Vue 3!</title>
+    <!-- CDN vue 3 -->
+    <!-- <link rel="stylesheet" href="style.css">-->
+</head>
+<body>
+      <div class="ejemplo"></div>
+      <div class="contenido"></div>
+      <button onclick="traer_dos()">refresh</button>
+      
+
+      <h1>Ejemplo Fetch then</h1>  
+      <div class="ejemploFetch"></div>
+      <button onclick="getNombre();">refresh</button>
+      <script src="main.js"></script>
+
+  <script>
+        ejemplo = document.querySelector(".ejemplo");
+        contenido = document.querySelector(".contenido");
+        
+
+        fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+            .then(response => response.json())
+            .then(data => {
+                    var myJSON = JSON.stringify(data);
+                    var myObj1=JSON.parse(myJSON);
+                    ejemplo.innerHTML = myObj1.time.updated;
+                    console.log(myObj1.time);
+                });
+
+        function traer_dos() {
+            fetch('https://randomuser.me/api')
+                .then(res => res.json())
+                .then(res => {
+                    console.log(res)
+                    console.log(res.results[0].email)
+                    // contenido.innerHTML= `${res.results[0].email}`
+                    contenido.innerHTML= `
+                    <img src="${res.results[0].picture.large}" width="100px" class="img-fluid rounded-circle">
+                    <p>Nombre: ${res.results[0].name.first}</p>
+                    <p>Mail: ${res.results[0].email}</p>`
+            })
+        }
+        
+    
+  </script>
+
+  
+
+  
+</body>
+</html>

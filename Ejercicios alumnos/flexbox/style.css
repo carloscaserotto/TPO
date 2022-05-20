@@ -1,0 +1,12 @@
+*{
+  font-family: Verdana;
+}
+
+.contenedor-inline-flex{
+  border: 1px solid black;
+  display: inline-flex;
+}
+
+.contenedor-inline-flex div{
+  border: 1px solid black;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PYTHON-FRONT END 2022</title>
+  </head>
+  <body>
+    <h1 class='text-center'>I want my JS here only</h1>
+    <p class="miClase">Player 1: Chris</p>
+    <p class="my_class"%> Class</p>
+    <p id="my_id" %> Id</p>
+     <button> Click</button>
+     <a href="https://www.google.com" target="_self">Google</a>
+
+  </body>
+
+  <script type="text/javascript">
+
+  document.addEventListener('DOMContentLoaded', () => {
+    function createParagraph() {
+      const para = document.createElement('p');
+      para.textContent = 'You clicked the button!';
+      document.body.appendChild(para);
+    }
+    const buttons = document.querySelectorAll('button');
+
+    for (const button of buttons) {
+      button.addEventListener('click', createParagraph);
+      }
+    });
+
+    var el = document.querySelector(".my_class");
+
+    el.addEventListener('click', updateName);
+
+    function updateName() {
+      const name = prompt('Enter a new name');
+      el.textContent = `Player 1: ${name}`;
+    }
+
+    for(var i= 0; i<2; i++){
+
+     continue
+
+   }  
+
+  console.log(i)
+
+  </script>
+</html>

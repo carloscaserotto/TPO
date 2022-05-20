@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<style>
+    .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        margin: 15px;
+    }
+    .card{
+        border: 1px solid rgb(218, 216, 216);
+        margin:1%;
+        border-radius: 5px;
+    }
+    img{
+        width: 200px;
+    }
+    .card-body{
+        padding: 10%
+    }
+</style>
+</head>
+<body>
+    <h1>Rick and Morty:</h1>
+    <div id="app">
+        <button @click="anterior1()">Anterior</button>
+        <button @click="siguiente1()">Siguiente</button><br>
+        <div class="container">
+            <div v-for="personaje in personajes" class="card" >
+                <img :src="personaje.image"  alt="Card image" >
+                <div class="card-body">
+                    <h4 class="card-title"> {{personaje.name}} </h4>
+                    <p class="card-text">ID: {{personaje.id}}</p>
+                    <p class="card-text">Estado: {{personaje.status}}</p>
+                    <p class="card-text">Género: {{personaje.gender}} </p>
+                    <p class="card-text">Creado: {{personaje.created.substr(0,10)}}</p>
+                    <p class="card-text">Especie: {{personaje.species}} </p>             
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
